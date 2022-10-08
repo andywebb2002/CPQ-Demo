@@ -1,0 +1,12 @@
+<apex:page standardController="account_objectives__c" sidebar="false">
+    <p>Hello {! $User.FirstName}!</p>
+    <p>You are viewing the {! account_objectives__c.name} account.</p>
+    
+    <apex:form >
+       <apex:pageBlock title="Account Objectives">
+       <apex:pageBlockTable value="{!account_objectives__c}" var="acctObj">
+            <p>Here's the owner of this ADP: {! account_objectives__c.objectives__c}</p>
+       </apex:pageBlockTable>
+   </apex:pageBlock>
+   </apex:form>
+</apex:page>

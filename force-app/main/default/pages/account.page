@@ -1,0 +1,13 @@
+<apex:page standardController="Account" recordSetVar="account">
+<apex:form >
+    <apex:pageBlock title="Account List">
+        <apex:pageBlockTable value="{!account}" var="acc">
+            <apex:column >
+                <apex:outputLink value="/apex/displayaccountrecord?id={!acc.id}">{!acc.name}</apex:outputLink>
+            </apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:form>
+
+
+</apex:page>

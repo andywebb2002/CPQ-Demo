@@ -1,0 +1,44 @@
+<apex:page controller="clsController" extensions="PostalAddress" sidebar="false" id="Account">
+<apex:image value="{!$Resource.Claranet_Wide}" width="25%" />
+
+    <apex:form >
+    <apex:pageBlock title="Nominate Contacts" >
+        <apex:pageBlockButtons >
+            <apex:commandButton value="save" action="{!save}"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlockTable value="{!contacts}" var="contact">
+            <apex:column value="{!contact.name}"/>
+            <apex:column value="{!contact.id}"/>
+            <apex:column value="{!contact.phone}"/>
+            <apex:column headerValue="Email">
+             <apex:inputField value="{!contact.email}"/>
+             </apex:column>
+            <apex:column headerValue="Nominate">
+             <apex:inputField value="{!contact.Nominate__c}"/>
+             </apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    </apex:form>
+    
+        <apex:form >
+    <apex:pageBlock title="Postal Address" >
+        <apex:pageBlockButtons >
+            <apex:commandButton value="save" action="{!save}"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlockTable value="{!PostalAddress}" var="PA">
+            <apex:column value="{!PA.name}"/>
+            <apex:column value="{!PA.id}"/>
+            <apex:column value="{!PA.House__c}"/>
+            <apex:column headerValue="Street">
+             <apex:inputField value="{!PA.Street_Name__c}"/>
+             </apex:column>
+            <apex:column headerValue="Postal Code">
+             <apex:inputField value="{!PA.Postcode__c}"/>
+             </apex:column>
+             <apex:column headerValue="Country Code">
+             <apex:inputField value="{!PA.Country_Code__c}"/>
+             </apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

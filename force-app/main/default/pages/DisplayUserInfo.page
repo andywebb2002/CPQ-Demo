@@ -1,0 +1,14 @@
+<apex:page sidebar="false">
+    
+    <apex:pageBlock title="DisplayUserInfo">
+    	<apex:pageBlockSection >
+        	<p>{! $User.FirstName}</p>
+        
+        
+        </apex:pageBlockSection>
+    
+    
+    </apex:pageBlock>
+    
+    
+</apex:page>

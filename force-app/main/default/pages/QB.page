@@ -1,0 +1,9 @@
+<apex:page standardController="Opportunity">
+
+  <h1>Qorus Breeze</h1>
+  <p>
+    <!-- <a href="hcdemo.qorusdocs.com/Default.aspx?vendorGuid=35EC2902-7564-4657-813D-CD77E5F7E4D2&freeSearch=false&typename=opportunity&id={!Opportunity.Id}&userId={!$User.Id}"> QB Docs</a> -->
+    <apex:iframe src="https://hcdemo.qorusdocs.com/Default.aspx?vendorGuid=35EC2902-7564-4657-813D-CD77E5F7E4D2&freeSearch=false&typename=opportunity&id={!Opportunity.Id}&userId={!$User.Id}"> QB Docs" scrolling="true" id="theIframe" rendered="true"/>
+    </apex:iframe>
+  </p>
+</apex:page>

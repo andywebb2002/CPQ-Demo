@@ -1,0 +1,7 @@
+<apex:page >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations</h1>
+  This is your new Page: componentTest
+  <c:mycomponent myValue="My component's value" borderColor="red" />
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

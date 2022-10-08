@@ -1,0 +1,28 @@
+<apex:page sidebar="false" standardController="Account">
+    <apex:form >
+    <apex:pageBlock title="Account Details">
+        <apex:pageBlockSection >
+            <apex:outputField value="{! Account.Name}"/>
+            <apex:inputField value="{! Account.Phone}"/>
+            <apex:outputField value="{! Account.Industry}"/>
+            <apex:outputField value="{! Account.AnnualRevenue}"/>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    
+    <apex:pageBlock title="Contact">
+        <apex:pageBlockTable value="{! Account.Contacts}" var="Contact">
+            <apex:column value="{! Contact.name}"/>
+            <apex:column value="{! Contact.title}"/>
+            <apex:column value="{! Contact.phone}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    
+    <apex:pageBlock title="Postal Address">
+        <apex:pageBlockTable value="{! Account.Postal_Address__r}" var="PA">
+            <apex:column value="{! PA.name}"/>
+            <apex:column value="{! PA.Street_Name__c}"/>
+            <apex:column value="{! PA.Postcode__c}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

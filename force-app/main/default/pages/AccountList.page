@@ -1,0 +1,25 @@
+<apex:page standardController="Account" recordSetVar="accounts">
+    <table border="0" >
+
+        <tr>
+            <th>Account Name</th>
+            <th>Owner</th>
+            <th>Site</th>
+            <th>Fax</th>
+        </tr>
+
+        <apex:repeat var="a" value="{!accounts}">
+
+        <li>
+            <td>{!Account.Name}</td>
+            <td>{!Account.Owner}</td>
+            <td>{!Account.Site}</td>
+            <td>{!Account.Fax}</td>
+        </li>
+            
+        <apex:outputLink value="https://https://eu5.salesforce.com/apex/AccountList/<record id>"
+        id="theLink">https://eu5.salesforce.com/apex/AccountList</apex:outputLink>
+
+        </apex:repeat>
+    </table>
+</apex:page>

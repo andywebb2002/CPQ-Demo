@@ -1,0 +1,9 @@
+<apex:page standardController="Opportunity">
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+        		<apex:outputLink value="https://hcdemo.qorusdocs.com/Default.aspx?vendorGuid=35EC2902-7564-4657-813D-CD77E5F7E4D2&freeSearch=false&typename=opportunity&id={!Opportunity.Id}&userId={!$User.Id}">
+    		
+        		</apex:outputLink>
+            </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

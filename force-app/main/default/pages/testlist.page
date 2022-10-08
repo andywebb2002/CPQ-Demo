@@ -1,0 +1,14 @@
+<apex:page standardController="Account" extensions="myExtension">
+
+    <apex:pageBlock >
+        <apex:pageBlockSection title="Detailed Account Information">
+            <apex:pageBlockTable value="{!Account}" var="Acc">
+                <apex:column value="{! Acc.id}"/>
+                <apex:column value="{! Acc.Name}"/>
+                <apex:column value="{! Acc.Ownerid}"/>
+                <apex:column value="{! Acc.Active__c}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+
+</apex:page>

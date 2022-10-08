@@ -1,0 +1,31 @@
+<apex:page >
+   
+        <script type="text/javascript" src="/js/functions.js"></script>
+        <script src="/soap/ajax/11.1/connection.js"></script>
+    
+    <apex:pageBlock >
+        <apex:form >
+           
+            <body onload="init();">        
+                <table width="100%">
+                    <tr>
+                        <td>
+                          <input type="text" id="txtName" />
+                          <input type="button" value="Save"  />
+                          
+                        </td>
+                    </tr>
+                </table>
+            </body>
+            
+            <script language="javascript">
+            sforce.connection.sessionId = '{!$Api.Session_ID}';
+            function init()
+            {
+              alert('hi');
+            }
+             </script>
+        
+        </apex:form>
+    </apex:pageBlock>
+</apex:page>
